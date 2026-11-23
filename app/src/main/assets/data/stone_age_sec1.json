@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 2,
+  "era": {
+    "id": "stone_age",
+    "nameAr": "العصر الحجري",
+    "nameEn": "Stone Age",
+    "prestigeLevel": 1,
+    "sections": [
+      {
+        "id": "sec_01_fire_fuel",
+        "index": 1,
+        "nameAr": "القسم 1 · الحطب والفحم",
+        "nameEn": "Section 1 · Wood & Charcoal",
+        "goalAr": "إنتاج الحطب المجفف وتحويله إلى فحم نباتي عالي الطاقة عبر منظومة النقل اللوجستي",
+        "finalRewardType": "GLOBAL_SPEED_MULTIPLIER",
+        "factories": [
+          {
+            "id": "fac_01_dry_wood",
+            "index": 1,
+            "nameAr": "حطب مجفف",
+            "nameEn": "Dry Firewood",
+            "input": null,
+            "output": "dry_wood",
+            "colorHex": "#C97B36",
+            "crateModelId": "collection_crate",
+            "baseCrateValue": 12.0,
+            "unlockCratesRequired": 0,
+            "baseUpgradeCost": 15.0,
+            "machines": [
+              {
+                "id": "m_01_1",
+                "nameAr": "مُغذّي الحطب",
+                "archetype": "STACKER",
+                "modelId": "wood_feeder",
+                "placement": "FEEDER",
+                "localX": -3.0,
+                "localZ": 0.0,
+                "baseSpeed": 1.0
+              },
+              {
+                "id": "m_01_2",
+                "nameAr": "شقّاق الحجر العلوي",
+                "archetype": "CUTTER",
+                "modelId": "stone_splitter",
+                "placement": "OVERHEAD",
+                "localX": -0.4,
+                "localZ": 0.0,
+                "baseSpeed": 0.88
+              },
+              {
+                "id": "m_01_3",
+                "nameAr": "فرن التجفيف الجانبي",
+                "archetype": "FURNACE",
+                "modelId": "side_dryer",
+                "placement": "SIDE",
+                "localX": 1.8,
+                "localZ": -1.24,
+                "baseSpeed": 0.80
+              },
+              {
+                "id": "m_01_4",
+                "nameAr": "بكرة ربط الحبال",
+                "archetype": "BINDER",
+                "modelId": "rope_binder",
+                "placement": "OVERHEAD",
+                "localX": 3.9,
+                "localZ": 0.0,
+                "baseSpeed": 0.92
+              }
+            ]
+          },
+          {
+            "id": "fac_02_charcoal",
+            "index": 2,
+            "nameAr": "فحم نباتي",
+            "nameEn": "Charcoal",
+            "input": "dry_wood",
+            "output": "charcoal",
+            "colorHex": "#4E4B49",
+            "crateModelId": "charcoal_crate",
+            "baseCrateValue": 24.0,
+            "unlockCratesRequired": 12,
+            "baseUpgradeCost": 50.0,
+            "machines": [
+              {
+                "id": "m_02_1",
+                "nameAr": "مخبأ التكديس الهلالي",
+                "archetype": "STACKER",
+                "modelId": "charcoal_feeder",
+                "placement": "FEEDER",
+                "localX": -3.0,
+                "localZ": 0.0,
+                "baseSpeed": 0.95
+              },
+              {
+                "id": "m_02_2",
+                "nameAr": "قوس القولبة الطينية",
+                "archetype": "MOLDER",
+                "modelId": "clay_molder",
+                "placement": "OVERHEAD",
+                "localX": -0.4,
+                "localZ": 0.0,
+                "baseSpeed": 0.84
+              },
+              {
+                "id": "m_02_3",
+                "nameAr": "فرن الفحم الهرمي",
+                "archetype": "FURNACE",
+                "modelId": "charcoal_kiln",
+                "placement": "SIDE",
+                "localX": 1.8,
+                "localZ": -1.30,
+                "baseSpeed": 0.74
+              },
+              {
+                "id": "m_02_4",
+                "nameAr": "قناة الإخماد والفرز",
+                "archetype": "WASHER",
+                "modelId": "quench_sorter",
+                "placement": "OVERHEAD",
+                "localX": 3.9,
+                "localZ": 0.0,
+                "baseSpeed": 0.88
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

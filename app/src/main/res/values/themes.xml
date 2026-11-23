@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.StoneAgeFactory" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">#1C1917</item>
+        <item name="colorPrimary">#D97706</item>
+        <item name="colorPrimaryDark">#1C1917</item>
+        <item name="colorAccent">#F59E0B</item>
+    </style>
+</resources>
